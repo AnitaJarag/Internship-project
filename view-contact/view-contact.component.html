@@ -1,0 +1,19 @@
+<h1>Valuable Contacts</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Email ID</th>
+      <th>Message</th>
+    </tr>-
+  </thead>
+  <tbody>
+    <tr *ngFor="let contact of c">
+      <td>{{ contact.id }}</td>
+      <td>{{ contact.name }}</td>
+      <td>{{ contact.emailid }}</td>
+      <td>{{ contact.message }}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,69 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="assets/logo.jpeg" alt="CodeSpaze Logo" style="height: 40px;">
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#myNavbar"
+      aria-controls="myNavbar"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="myNavbar" [ngSwitch]="menuType">
+      <!-- Guest Menu -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0" *ngSwitchCase="'guest'">
+        <li class="nav-item"><a class="nav-link" routerLink="/" routerLinkActive="active">Home</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/about" routerLinkActive="active">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/internships" routerLinkActive="active">Internships</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact Us</a></li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/register" routerLinkActive="active">
+            <i class="fa fa-user"></i> Register
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/login" routerLinkActive="active">
+            <i class="fa fa-sign-in"></i> Login
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/adminlogin" routerLinkActive="active">
+            <i class="fa fa-sign-in"></i> Admin Login
+          </a>
+        </li>
+      </ul>
+
+      <!-- User Menu -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0" *ngSwitchCase="'user'">
+        <li class="nav-item"><a class="nav-link" routerLink="/" routerLinkActive="active">Home</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/about" routerLinkActive="active">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/internships" routerLinkActive="active">Internships</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact Us</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/feedback" routerLinkActive="active">Feedback</a></li>
+        <li class="nav-item">
+          <a (click)="slogout()" class="nav-link" routerLink="/login" routerLinkActive="active">
+            <i class="fa fa-sign-out"></i> Logout
+          </a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0" *ngSwitchCase="'admin'">
+        <li class="nav-item"><a class="nav-link" routerLink="/" routerLinkActive="active">Home</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/viewregister" routerLinkActive="active">View Register</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/viewcontact" routerLinkActive="active"> View Contact Us</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/viewfeedback" routerLinkActive="active">View Feedback</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/viewapplyer" routerLinkActive="active">View Applyer</a></li>
+        <li class="nav-item">
+          <a (click)="alogout()" class="nav-link" routerLink="/login" routerLinkActive="active">
+            <i class="fa fa-sign-out"></i> Logout
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

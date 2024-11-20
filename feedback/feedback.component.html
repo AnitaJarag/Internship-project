@@ -1,0 +1,43 @@
+<div class="container mt-5">
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <img src="../assets/c4.jpeg" class="img-fluid" alt="Dog Image">
+        </div>
+        <div class="col-md-6">
+            <div class="card shadow-lg">
+                <div class="card-header">
+                    Feedback Form
+                </div>
+                <div class="card-body">
+                    <form (submit)="submitdata()">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="name"
+                                name="name"
+                                [(ngModel)]="f.name"
+                                required
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="suggestion">Suggestion:</label>
+                            <textarea
+                                class="form-control"
+                                id="suggestion"
+                                name="suggestion"
+                                rows="8"
+                                [(ngModel)]="f.suggestion"
+                                required
+                            ></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

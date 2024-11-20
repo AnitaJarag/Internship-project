@@ -1,0 +1,66 @@
+<section class="center-section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-7">
+        <div class="card form-card">
+          <div class="page-header text-center mb-4">
+            <h1>Register Here</h1>
+          </div>
+          <form (ngSubmit)="submitdata()" #addForm="ngForm">
+            <div class="form-group">
+              <label for="nm">Name:</label>
+              <input type="text" #name="ngModel" class="form-control" id="nm" placeholder="Enter Name Here" name="name" [(ngModel)]="reg.name" required pattern="^[a-zA-Z]+$">
+              <div *ngIf="name.invalid && name.touched" style="color:red;">
+                <div *ngIf="name.errors?.['required']">Name is required</div>
+                <div *ngIf="name.errors?.['pattern']">Name can only contain alphabets</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="mobile">Mobile No:</label>
+              <input type="text" #mobileno="ngModel" class="form-control" id="mobile" placeholder="Enter Mobile Number" name="mobileno" [(ngModel)]="reg.mobileno" required pattern="^[0-9]{10,}$">
+              <div *ngIf="mobileno.invalid && mobileno.touched" style="color:red;">
+                <div *ngIf="mobileno.errors?.['required']">Mobile number is required</div>
+                <div *ngIf="mobileno.errors?.['pattern']">Mobile number must contain only numbers</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="ct">City:</label>
+              <select class="form-control" id="ct" name="city" [(ngModel)]="reg.city" required>
+                <option value="">--select city--</option>
+                <option value="satara">Satara</option>
+                <option value="pune">Pune</option>
+                <option value="mumbai">Mumbai</option>
+              </select>
+              <div *ngIf="!addForm.controls['city'].valid && addForm.controls['city'].touched" style="color:red;">City is required</div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email address:</label>
+              <input type="email" #emailid="ngModel" class="form-control" id="email" placeholder="Enter Email Here" name="emailid" [(ngModel)]="reg.emailid" required>
+              <div *ngIf="emailid.invalid && emailid.touched" style="color:red;">
+                <div *ngIf="emailid.errors?.['required']">Email is required</div>
+                <div *ngIf="emailid.errors?.['email']">Email must be valid</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="pwd">Password:</label>
+              <input type="password" #password="ngModel" class="form-control" id="pwd" placeholder="Enter Password Here" name="password" [(ngModel)]="reg.password" required minlength="8">
+              <div *ngIf="password.invalid && password.touched" style="color:red;">
+                <div *ngIf="password.errors?.['required']">Password is required</div>
+                <div *ngIf="password.errors?.['minlength']">Password must be at least 8 characters long</div>
+              </div>
+            </div>
+            <div class="form-check mb-3">
+              <input type="checkbox" class="form-check-input" id="rememberMe">
+              <label class="form-check-label" for="rememberMe">Remember me</label>
+            </div>
+            <div class="button-group">
+              <!-- Submit button is only enabled when the form is valid -->
+              <button type="submit" class="btn btn-primary me-2" [disabled]="addForm.invalid">Submit</button>
+              <button type="reset" class="btn btn-danger">Reset</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

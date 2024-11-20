@@ -1,0 +1,26 @@
+/* Set a custom height for the navbar */
+.navbar {
+  min-height: 60px; /* Adjust as needed */
+  padding: 0 15px;
+}
+
+/* Adjust the height and alignment of the navbar brand (logo) */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  padding: 0; /* Remove default padding */
+}
+
+.navbar-brand img {
+  width: 120px; /* Adjust width as needed */
+  height: auto;
+  padding: 5px;
+  background-color: white; /* Add background to make it visible */
+  border-radius: 5px;
+}
+
+/* Center nav items vertically in the navbar and increase font size */
+.navbar-nav .nav-link {
+  padding: 15px 10px; /* Adjust padding to center items */
+  font-size: 1.2rem; /* Increase font size (adjust as needed) */
+}

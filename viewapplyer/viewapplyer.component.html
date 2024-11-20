@@ -1,0 +1,24 @@
+<h1>Valuable Applicants</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>City</th>
+      <th>Phone</th>
+      <th>Position</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let applicant of applications">
+      <td>{{ applicant.id }}</td>
+      <td>{{ applicant.name }}</td>
+      <td>{{ applicant.email }}</td>
+      <td>{{ applicant.city }}</td>
+      <td>{{ applicant.phone }}</td>
+      <td>{{ applicant.position }}</td>
+    </tr>
+  </tbody>
+</table>
+s

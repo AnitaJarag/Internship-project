@@ -1,0 +1,57 @@
+/* Full viewport height and center alignment */
+.vh-100 {
+    min-height: 100vh;
+  }
+  
+  /* Custom container height */
+  .h-custom {
+    height: calc(100% - 73px);
+  }
+  
+  /* Right image styling */
+  .right-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  /* Media Query for mobile view */
+  @media (max-width: 767px) {
+    /* Make the image hide on small screens */
+    .d-none.d-lg-block {
+      display: none;
+    }
+  
+    /* Adjust login form for small screens */
+    .col-md-8.col-lg-6.col-xl-4.offset-xl-1 {
+      padding: 20px;
+    }
+  }
+  
+  /* Divider styling */
+  .divider:after,
+  .divider:before {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #eee;
+  }
+  
+  /* Social media logo style for circular shape */
+  .social-logo {
+    width: 30px;  /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+    border-radius: 50%;  /* Circular shape */
+    object-fit: cover;   /* Ensure the image covers the circle without stretching */
+  }
+  
+  /* Card styling */
+  .card {
+    border: 1px solid #ddd;  /* Adds a light border to the card */
+    border-radius: 10px;  /* Rounded corners */
+  }
+  
+  .card .form-outline {
+    margin-bottom: 1.5rem;  /* Adjust spacing between form elements */
+  }
+  

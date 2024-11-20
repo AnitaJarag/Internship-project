@@ -1,0 +1,137 @@
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Container and Title */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 20px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Flex Layout for Internships */
+.row {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+/* Styling for Each Internship Card */
+.col-sm-4 {
+  flex: 0 0 30%;
+  max-width: 30%;
+  margin-bottom: 30px;
+  padding: 15px;
+}
+
+.frame {
+  background-color: #f0f0f0;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+  height: 380px; /* Fixed height for all internship boxes */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribute space evenly */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.frame:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.bg-info {
+  background-color: #17a2b8;
+}
+
+.bg-warning {
+  background-color: #ffc107;
+}
+
+.bg-primary {
+  background-color: #007bff;
+}
+
+.internship-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 20px;
+  flex-grow: 1; /* Make title occupy available space */
+}
+
+.internship-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* Buttons Styling */
+.btn {
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-start {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-start:hover {
+  background-color: #218838;
+}
+
+.btn-back {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn-back:hover {
+  background-color: #5a6268;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .col-sm-4 {
+    flex: 0 0 45%;
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .col-sm-4 {
+    flex: 0 0 90%;
+    max-width: 90%;
+  }
+}

@@ -1,0 +1,143 @@
+/* Body Styling */
+body {
+  background-color: #212121;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* About Us Section Styling */
+.about-us-section {
+  background: linear-gradient(135deg, white, black);
+  color: white;
+  padding: 60px 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 40px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.about-us-section h2 {
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 20px;
+}
+
+.about-us-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: white;
+  text-align: justify;
+}
+
+/* Section Box Styling */
+.section-box {
+  background-color: white;
+  color: #333;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.section-box:hover {
+  transform: translateY(-5px);
+}
+
+.section-box h2 {
+  color: #00bcd4;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.section-box p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  text-align: justify;
+}
+
+/* Hover Zoom Effect for Images */
+.hover-zoom {
+  transition: transform 0.4s ease;
+  border-radius: 10px;
+}
+
+.hover-zoom:hover {
+  transform: scale(1.05);
+}
+
+/* Image Styling */
+.img-fluid {
+  max-width: 60%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Make the images smaller */
+.small-img {
+  max-width: 10%;  /* Limit image width */
+  height: auto;
+}
+
+/* Center Text Content */
+.d-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Smooth Fade-In Animation */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Additional Enhancements */
+h2 {
+  color: #00bcd4;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+section h2 {
+  font-size: 1.8rem;
+}
+
+/* Shadow for Section Boxes */
+.shadow-lg {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-box {
+      padding: 20px;
+  }
+  .section-box h2 {
+      font-size: 1.5rem;
+  }
+  .section-box p {
+      font-size: 1rem;
+  }
+  .about-us-section {
+      padding: 40px 20px;
+  }
+  .about-us-section h2 {
+      font-size: 1.8rem;
+  }
+}
